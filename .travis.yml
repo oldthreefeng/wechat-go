@@ -8,5 +8,6 @@ go:
 
 script:
     - go mod download 
+    - go
     - go build examples/linux/terminal_bot.go
 
