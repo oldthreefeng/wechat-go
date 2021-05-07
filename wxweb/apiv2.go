@@ -396,8 +396,8 @@ func (api *ApiV2) WebWxUploadMedia(common *Common, ce *XmlConfig, cookies []*htt
 
 	fw, _ = w.CreateFormField("id")
 	fw.Write([]byte("WU_FILE_" + strconv.Itoa(int(common.MediaCount))))
-	common.MediaCount = atomic.AddUint32(&common.MediaCount, 1)
-
+	count := atomic.AddUint32(&common.MediaCount, 1)
+	common.MediaCount = count
 	fw, _ = w.CreateFormField("name")
 	fw.Write([]byte(filename))
 

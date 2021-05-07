@@ -49,7 +49,7 @@ func Register(session *wxweb.Session) {
 
 }
 func autoReply(session *wxweb.Session, msg *wxweb.ReceivedMessage) {
-	logs.Info( "isgourp: %v, MsgId: %v, content: %v, from: %v, to: %v, who: %v, msgType: %v, subtype: %v, originContent: %v,at: %v, Url: %v", msg.IsGroup, msg.MsgId, msg.Content, msg.FromUserName, msg.ToUserName, msg.Who, msg.MsgType, msg.SubType,
+	logs.Debug( "isgourp: %v, MsgId: %v, content: %v, from: %v, to: %v, who: %v, msgType: %v, subtype: %v, originContent: %v,at: %v, Url: %v", msg.IsGroup, msg.MsgId, msg.Content, msg.FromUserName, msg.ToUserName, msg.Who, msg.MsgType, msg.SubType,
 	msg.OriginContent, msg.At, msg.Url)
 	if !msg.IsGroup  {
 		// session.SendText("暂时不在，稍后回复", session.Bot.UserName, msg.FromUserName)

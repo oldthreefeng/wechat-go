@@ -116,7 +116,7 @@ func demo() {
 package demo // 以插件名命令包名
 
 import (
-	"github.com/oldthreefeng/rrframework/logs" // 导入日志包
+	"github.com/oldthreefeng/wechat-go/logs" // 导入日志包
 	"github.com/oldthreefeng/wechat-go/wxweb"  // 导入协议包
 )
 
@@ -142,7 +142,7 @@ func demo(session *wxweb.Session, msg *wxweb.ReceivedMessage) {
 	// 注意，contact manager只存储了已保存到通讯录的群组
 	contact := session.Cm.GetContactByUserName(msg.FromUserName)
 	if contact == nil {
-		logs.Error("ignore the messages from", msg.FromUserName)
+		logs.Warn("ignore the messages from %v, cause you don't save the contact", msg.FromUserName)
 		return
 	}
 

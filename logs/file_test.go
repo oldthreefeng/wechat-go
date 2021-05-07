@@ -77,7 +77,7 @@ func TestFileSize(t *testing.T) {
 	"maxlines":100000,
 	"maxsize":1,
 	"append":true} `)
-	for i := 0; i < 3000; i++ {
+	for i := 0; i < 3; i++ {
 		log.Trace("trace")
 		log.Debug("debug")
 		log.Info("info")

@@ -49,7 +49,7 @@ func youdao(session *wxweb.Session, msg *wxweb.ReceivedMessage) {
 	// 可选:避免此插件对未保存到通讯录的群生效 可以用contact manager来过滤
 	contact := session.Cm.GetContactByUserName(msg.FromUserName)
 	if contact == nil {
-		logs.Error("ignore the messages from", msg.FromUserName)
+		logs.Warn("ignore the messages from %v, cause you don't save the contact", msg.FromUserName)
 		return
 	}
 

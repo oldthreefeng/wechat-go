@@ -48,12 +48,13 @@ func Register(session *wxweb.Session) {
 }
 
 func revoker(session *wxweb.Session, msg *wxweb.ReceivedMessage) {
-	if msg.FromUserName != session.Bot.UserName {
+	// 发送消息 和 机器人 是同一人
+	if msg.FromUserName == session.Bot.UserName {
+		time.Sleep(time.Second * 3)
+		session.RevokeMsg(msg.MsgId, msg.MsgId, msg.ToUserName)
 		return
 	}
 	//if strings.Contains(msg.Content, "美女") ||
 	//	strings.Contains(msg.Content, "笑话") {
-	time.Sleep(time.Second * 3)
-	session.RevokeMsg(msg.MsgId, msg.MsgId, msg.ToUserName)
 	//}
 }

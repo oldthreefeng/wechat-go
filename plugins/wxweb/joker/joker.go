@@ -61,7 +61,7 @@ func fetchJokes() {
 
 func listenCmd(session *wxweb.Session, msg *wxweb.ReceivedMessage) {
 	if contact := session.Cm.GetContactByUserName(msg.FromUserName); contact == nil {
-		logs.Error("ignore the messages from", msg.FromUserName)
+		logs.Warn("ignore the messages from %v, cause you don't save the contact", msg.FromUserName)
 		return
 	}
 	if !strings.Contains(msg.Content, "讲个笑话") {
