@@ -48,7 +48,7 @@ func TestFileLine(t *testing.T) {
 	log.Alert("alert")
 	log.Crit("critical")
 	log.Emer("emergency")
-	f, err := os.Open("test.log")
+	f, err := os.Open("test2.log")
 	if err != nil {
 		t.Fatal(err)
 	}
