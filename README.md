@@ -31,14 +31,17 @@ go build .
 
 ## 插件
 
-```
 ## 插件列表
 ###### switcher
 一个管理插件的插件
+
+```
 #关闭某个插件, 在微信聊天窗口输入
 disable faceplusplus
+
 #开启某个插件, 在微信聊天窗口输入
 enable faceplusplus
+
 #查看所有插件信息, 在微信聊天窗口输入
 dump
 ```
