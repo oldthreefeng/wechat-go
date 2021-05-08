@@ -18,9 +18,10 @@
 
 
 ## 获取源码
-	git clone github.com/oldthreefeng/wechat-go.git
-	go mod download 
-
+```
+git clone github.com/oldthreefeng/wechat-go.git
+go mod download 
+```
 ## 编译并运行
 #### linux/mac
 ```
@@ -30,34 +31,36 @@ go build .
 
 ## 插件
 
-```
 ## 插件列表
 ###### switcher
 一个管理插件的插件
+
 ```
 #关闭某个插件, 在微信聊天窗口输入
 disable faceplusplus
+
 #开启某个插件, 在微信聊天窗口输入
 enable faceplusplus
+
 #查看所有插件信息, 在微信聊天窗口输入
 dump
 ```
+
 ###### faceplusplus
 对收到的图片做面部识别，返回性别和年龄
+
 ###### gifer
 以收到的文字消息为关键字做gif搜索，返回gif图, 注意返回的gif可能尺度较大，比如文字消息中包含“污”等关键词。
+
 ###### replier
 对收到的文字/图片消息，做自动应答，回复固定文字消息
+
 ###### laosj
-随机获取一张美女图片, 在聊天窗口输入
-```
-美女
-```
+随机获取一张美女图片, 在聊天窗口输入 美女
+
 ###### joker
-获取一则笑话, 在聊天窗口输入
-```
-笑话
-```
+获取一则笑话, 在聊天窗口输入 笑话
+
 ###### revoker
 消息撤回插件, 3s后自动撤回手机端所发的文本消息. 机器人发出的消息需要自己在对应插件里写撤回逻辑.
 
