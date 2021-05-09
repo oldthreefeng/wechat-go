@@ -1,6 +1,6 @@
 # wechat-go
 
-[![Build Status](https://travis-ci.org/oldthreefeng/wechat-go.svg?branch=master)](https://travis-ci.org/oldthreefeng/wechat-go)
+[![Build Status](https://travis-ci.com/oldthreefeng/wechat-go.svg?branch=main)](https://travis-ci.com/oldthreefeng/wechat-go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/oldthreefeng/wechat-go)](https://goreportcard.com/report/github.com/oldthreefeng/wechat-go)
 [![codebeat badge](https://codebeat.co/badges/4f78bcb2-bf75-477d-a8f4-b09fde3dae80)](https://codebeat.co/projects/github-com-oldthreefeng-wechat-go-master)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
