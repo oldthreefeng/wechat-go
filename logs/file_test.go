@@ -90,6 +90,8 @@ func TestFileSize(t *testing.T) {
 		time.Sleep(time.Millisecond * 10)
 	}
 	// 手动删
+
+	os.Remove("test.log")
 }
 
 func TestFileByMaxLine(t *testing.T) {

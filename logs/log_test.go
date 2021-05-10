@@ -2,6 +2,7 @@ package logs
 
 import (
 	"fmt"
+	"os"
 	"testing"
 	"time"
 )
@@ -121,4 +122,5 @@ func TestLogTimeFormat(t *testing.T) {
 		Emer("Emergency", timeType)
 	}
 
+	os.Remove("app.log")
 }
