@@ -215,7 +215,7 @@ func (f *fileLogger) createFreshFile(logTime time.Time) error {
 	}
 
 	if err == nil {
-		return fmt.Errorf("Cannot find free log number to rename %s", f.Filename)
+		return fmt.Errorf("cannot find free log number to rename %s", f.Filename)
 	}
 	f.fileWriter.Close()
 
@@ -238,10 +238,10 @@ RESTART_LOGGER:
 	go f.deleteOldLog()
 
 	if startLoggerErr != nil {
-		return fmt.Errorf("Rotate StartLogger: %s", startLoggerErr)
+		return fmt.Errorf("rotate StartLogger: %s", startLoggerErr)
 	}
 	if err != nil {
-		return fmt.Errorf("Rotate: %s", err)
+		return fmt.Errorf("rotate: %s", err)
 	}
 	return nil
 }

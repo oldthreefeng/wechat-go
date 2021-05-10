@@ -439,9 +439,8 @@ func Trace(f interface{}, v ...interface{}) {
 
 func formatLog(f interface{}, v ...interface{}) string {
 	var msg string
-	switch f.(type) {
+	switch f := f.(type) {
 	case string:
-		msg = f.(string)
 		if len(v) == 0 {
 			return msg
 		}
@@ -461,10 +460,3 @@ func formatLog(f interface{}, v ...interface{}) string {
 	return fmt.Sprintf(msg, v...)
 }
 
-func stringTrim(s string, cut string) string {
-	ss := strings.SplitN(s, cut, 2)
-	if 1 == len(ss) {
-		return ss[0]
-	}
-	return ss[1]
-}
